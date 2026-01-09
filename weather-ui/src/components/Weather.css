@@ -1,0 +1,230 @@
+/* Common reset and fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  /* App background for day/night */
+  .app.day {
+    background: linear-gradient(to right, #fff8e7, #fffde7);
+  }
+  
+  .app.night {
+    background: linear-gradient(to right, #2c3e50, #34495e); /* dark blue/purple */
+  }
+  
+  /* Center the card */
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Weather Card */
+  .weather-card {
+    width: 380px;
+    padding: 30px 25px;
+    border-radius: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Card background for day/night */
+  .app.day .weather-card {
+    background: #ffffff;
+  }
+  
+  .app.night .weather-card {
+    background: #1c1c2c;
+    color: #f0f0f0;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .app.night .title {
+    color: #ffd700; /* golden text at night */
+  }
+  
+  /* Toggle Button */
+  .toggle-mode {
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .app.day .toggle-mode {
+    background: #ffe082;
+    color: #333;
+  }
+  
+  .app.night .toggle-mode {
+    background: #34495e;
+    color: #fff;
+  }
+  
+  /* Search Box */
+  .search-box {
+    display: flex;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid #f0e68c;
+  }
+  
+  .search-box input {
+    flex: 1;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: #fffbe0;
+  }
+  
+  .app.night .search-box input {
+    background: #2c3e50;
+    color: #f0f0f0;
+  }
+  
+  .search-box button {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .app.day .search-box button {
+    background: #ffd54f;
+    color: #333;
+  }
+  
+  .app.night .search-box button {
+    background: #34495e;
+    color: #fff;
+  }
+  
+  /* Weather Info */
+  .weather-info {
+    margin-bottom: 25px;
+  }
+  
+  .icon img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .temp {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  .app.day .temp {
+    color: #ffb300; /* sunny yellow */
+  }
+  
+  .app.night .temp {
+    color: #f39c12; /* night orange */
+  }
+  
+  .desc {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .app.night .desc {
+    color: #ddd;
+  }
+  
+  .location {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .app.night .location {
+    color: #ccc;
+  }
+  
+  /* Extra Info Cards */
+  .details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .details div {
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .app.day .details div {
+    background: #fff8dc;
+  }
+  
+  .app.day .details div:hover {
+    background: #fff2b2;
+  }
+  
+  .app.night .details div {
+    background: #2c3e50;
+  }
+  
+  .app.night .details div:hover {
+    background: #3d566e;
+  }
+  
+  .details div span {
+    font-size: 1.5rem;
+  }
+  
+  .details div p {
+    font-size: 0.85rem;
+  }
+  
+  .details div strong {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Responsive */
+  @media (max-width: 420px) {
+    .weather-card {
+      width: 90%;
+      padding: 25px 20px;
+    }
+  
+    .temp {
+      font-size: 2.5rem;
+    }
+  
+    .icon img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .details div {
+      padding: 12px;
+    }
+  }
+  
